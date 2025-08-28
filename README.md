@@ -45,17 +45,17 @@ Tools
 - sales_by_date(date: str)
 
 
-Claude Desktop (conexión local)
+Claude Desktop (local connection)
 
-1. Construye la imagen de Docker (una sola vez):
+1. Build the Docker image (once):
 ```bash
 docker build -t sales-mcp .
 ```
 
-2. En Windows, crea/edita el archivo de configuración de Claude Desktop en:
+2. On Windows, create/edit the Claude Desktop config file at:
 `%APPDATA%\Claude\claude_desktop_config.json`
 
-3. Agrega esta configuración para ejecutar el MCP dentro de Docker:
+3. Add this configuration to run the MCP inside Docker:
 ```json
 {
     "mcpServers": {
@@ -71,7 +71,7 @@ docker build -t sales-mcp .
 }
 ```
 
-4. Guarda el archivo y reinicia Claude Desktop.
+4. Save the file and restart Claude Desktop.
 
-Nota: si quieres usar otro conector distinto a `mock`, ajusta la variable `DB_TYPE` y, de ser necesario, agrega `-e DB_CONN_STR=...` siguiendo la sección "Environment" de este README.
+Note: If you want to use a connector other than `mock`, set `DB_TYPE` accordingly and, if needed, add `-e DB_CONN_STR=...` following the "Environment" section of this README.
 
